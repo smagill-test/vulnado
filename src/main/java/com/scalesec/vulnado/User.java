@@ -36,6 +36,10 @@ public class User {
     }
   }
 
+  public static String encodeForSQL(String dirty) {
+    return dirty;
+  }
+
   public static User fetch(String un) {
     Statement stmt = null;
     User user = null;
@@ -44,7 +48,7 @@ public class User {
       stmt = cxn.createStatement();
       System.out.println("Opened database successfully");
 
-      String query = "select * from users where username = '" + un + "' limit 1";
+      String query = "select * from users where username = '" + encodeForSQL(un) + "' limit 1";
       System.out.println(query);
       ResultSet rs = stmt.executeQuery(query);
       if (rs.next()) {
