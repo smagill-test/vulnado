@@ -26,5 +26,10 @@
       "procedure": "com.scalesec.vulnado.CommentsController.sanitizeComments",
       "kind": "HTML"
     }
+  ],
+   "quandary-sanitizers": [
+    {
+      "procedure": "com.scalesec.vulnado.User.encodeForSQL",
+    }
   ]
 }
