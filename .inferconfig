@@ -21,10 +21,6 @@
     {
       "procedure": "java.sql.PreparedStatement.executeUpdate",
       "kind": "SQLWrite"
-    },
-    {
-      "procedure": "com.scalesec.vulnado.CommentsController.sanitizeComments",
-      "kind": "HTML"
     }
   ],
   "quandary-sanitizers": [
