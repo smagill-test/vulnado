@@ -23,7 +23,7 @@ public class LoginController {
         input = validateLoginRequest(input);
 
 //        User user = User.fetch(input.username);
-        User user = "Test";
+        User user = new User("0","Test","0123456789");
         if (Postgres.md5(input.password).equals(user.hashedPassword)) {
             return new LoginResponse(user.token("dd"));
         } else {
