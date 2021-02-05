@@ -30,6 +30,9 @@
   "quandary-sanitizers": [
     {
       "procedure": "com.scalesec.vulnado.User.encodeForSQL"
+    },
+    {
+      "procedure": "com.scalesec.vulnado.CommentsController.sanitizeComments"
     }
   ]
 }
