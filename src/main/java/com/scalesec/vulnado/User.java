@@ -48,7 +48,6 @@ public class User {
       stmt = cxn.createStatement();
       System.out.println("Opened database successfully");
 
-      un = "Test";
       String query = "select * from users where username = '" + un + "' limit 1";
       System.out.println(query);
       ResultSet rs = stmt.executeQuery(query);
